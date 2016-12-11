@@ -38,7 +38,27 @@
             }
         }
         function setContent(contents) {
-
+            var size=contents.length;
+            for(var i=0;i<size;i++){
+                var nextNode=contents[i];
+                var tr=document.createElement("tr");
+                var td=document.createElement("td");
+                td.setAttribute("border","0")
+                td.setAttribute("bgcolor","#FFFAFA");
+                td.onmouseout=function () {
+                    this.className='mouseOver';
+                }
+                td.onmouseout=function () {
+                    this.className='mouseOut';
+                }
+                td.onclick=function () {
+                    this.
+                }
+                var text=document.createTextNode(nextNode);
+                td.appendChild(text);
+                tr.appendChild(td);
+                document.getElementById("content_table_body").appendChild(tr);
+            }
         }
         function createXMLHttp() {
             var xmlHttp;
